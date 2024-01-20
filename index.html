@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Researcher's Personal Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav nav-tabs">
+        <a class="nav-item nav-link active" href="#home">Home</a>
+        <a class="nav-item nav-link" href="#research">Research</a>
+        <a class="nav-item nav-link" href="#publications">Publications</a>
+        <a class="nav-item nav-link" href="#projects">Projects</a>
+        <a class="nav-item nav-link" href="#cv">CV</a>
+        <a class="nav-item nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <div id="content">
+        <section id="home">
+            <h1>Welcome</h1>
+            <p>Introduction about the researcher.</p>
+        </section>
+        <section id="research" style="display:none;">
+            <h1>Research</h1>
+            <p>Details about research interests and topics.</p>
+        </section>
+        <section id="publications" style="display:none;">
+            <h1>Publications</h1>
+            <p>List of publications.</p>
+        </section>
+        <section id="projects" style="display:none;">
+            <h1>Projects</h1>
+            <p>Information on projects.</p>
+        </section>
+        <section id="cv" style="display:none;">
+            <h1>Curriculum Vitae</h1>
+            <p>Detailed CV.</p>
+        </section>
+        <section id="contact" style="display:none;">
+            <h1>Contact</h1>
+            <p>Contact form and information.</p>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.0/dist/umd-popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript for tab navigation will be added here.
+        // Tab navigation functionality
+$(document).ready(function(){
+    $('.nav-link').click(function(){
+        // Remove active class from all tabs
+        $('.nav-link').removeClass('active');
+        // Add active class to the clicked tab
+        $(this).addClass('active');
+
+        // Hide all sections
+        $('section').hide();
+
+        // Show the selected section
+        var sectionToShow = $(this).attr('href');
+        $(sectionToShow).show();
+
+        return false;
+    });
+});
+
+
+    </script>
+</body>
+</html>
+
